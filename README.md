@@ -44,7 +44,7 @@ python3 app.py
 ### Step 7: See Your App in Action! 
 Open your web browser and go to: **http://127.0.0.1:5002**
 
-````
+```bash
 flask-inventory/
 ├── app.py                 # Main Flask app (this is where everything starts!)
 ├── seed_data.py          # Creates example data for you to try
