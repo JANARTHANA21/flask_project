@@ -1,0 +1,359 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced transitions */
+.transition-all {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Mobile-first responsive utilities */
+.container-mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: 100%;
+}
+
+@media (min-width: 640px) {
+    .container-mobile {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-mobile {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+}
+
+/* Card enhancements with mobile-friendly spacing */
+.card-hover {
+    transition: all 0.3s ease-in-out;
+}
+
+.card-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile-optimized button styles */
+.btn-mobile {
+    min-height: 44px; /* iOS touch target minimum */
+    padding: 12px 16px;
+    font-weight: 500;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.btn-mobile:active {
+    transform: scale(0.98);
+}
+
+/* Touch-friendly form controls */
+.form-input {
+    min-height: 44px;
+    padding: 12px 16px;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 16px; /* Prevents iOS zoom */
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #3b82f6;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Table responsiveness improvements */
+.table-mobile {
+    font-size: 0.875rem;
+}
+
+@media (max-width: 1024px) {
+    .table-mobile {
+        display: none; /* Hide tables on mobile, show cards instead */
+    }
+}
+
+/* Mobile card layouts */
+.mobile-card {
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e5e7eb;
+    transition: all 0.2s ease;
+}
+
+.mobile-card:active {
+    transform: scale(0.98);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Icon enhancements */
+.icon-large {
+    font-size: 2rem;
+    line-height: 1;
+}
+
+@media (min-width: 768px) {
+    .icon-large {
+        font-size: 2.5rem;
+    }
+}
+
+/* Status badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+/* Print styles */
+@media print {
+    .no-print {
+        display: none !important;
+    }
+    
+    .print-break {
+        page-break-before: always;
+    }
+    
+    body {
+        font-size: 12px;
+        color: black;
+        background: white;
+    }
+    
+    .shadow-lg, .shadow-md, .shadow {
+        box-shadow: none !important;
+    }
+    
+    .border {
+        border: 1px solid #000 !important;
+    }
+}
+
+/* Dark mode support (if needed in future) */
+@media (prefers-color-scheme: dark) {
+    .dark-mode-ready {
+        --bg-primary: #1f2937;
+        --text-primary: #f9fafb;
+        --border-color: #374151;
+    }
+}
+
+/* Accessibility improvements */
+.focus-visible:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Loading states */
+.loading-skeleton {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Mobile navigation enhancements */
+.mobile-nav {
+    transform: translateY(-100%);
+    transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav.active {
+    transform: translateY(0);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Responsive text sizing */
+.text-responsive-sm {
+    font-size: 0.875rem;
+}
+
+@media (min-width: 768px) {
+    .text-responsive-sm {
+        font-size: 1rem;
+    }
+}
+
+.text-responsive-lg {
+    font-size: 1.125rem;
+}
+
+@media (min-width: 768px) {
+    .text-responsive-lg {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .text-responsive-lg {
+        font-size: 1.5rem;
+    }
+}
+
+/* Custom animations and transitions */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+/* Custom hover effects for cards */
+.hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Smooth transitions for interactive elements */
+.smooth-transition {
+    transition: all 0.2s ease-in-out;
+}
+
+/* Custom focus styles for better accessibility */
+.focus-ring:focus {
+    outline: 2px solid #3b82f6;
+    outline-offset: 2px;
+}
+
+/* Print styles for reports */
+@media print {
+    nav, .no-print, button {
+        display: none !important;
+    }
+    
+    body {
+        font-size: 12px;
+        line-height: 1.4;
+    }
+    
+    .bg-white {
+        box-shadow: none !important;
+    }
+    
+    .rounded-lg {
+        border: 1px solid #d1d5db;
+    }
+    
+    .text-white {
+        color: black !important;
+    }
+    
+    .bg-blue-700, .bg-green-600, .bg-yellow-500 {
+        background-color: white !important;
+        color: black !important;
+        border: 1px solid #d1d5db;
+    }
+}
+
+/* Custom gradient backgrounds */
+.gradient-blue {
+    background: linear-gradient(135deg, #1e40af 0%, #7c3aed 100%);
+}
+
+.gradient-green {
+    background: linear-gradient(135deg, #059669 0%, #10b981 100%);
+}
+
+.gradient-yellow {
+    background: linear-gradient(135deg, #d97706 0%, #f59e0b 100%);
+}
+
+/* Status indicator styles */
+.status-positive {
+    color: #059669;
+    font-weight: 600;
+}
+
+.status-negative {
+    color: #dc2626;
+    font-weight: 600;
+}
+
+.status-neutral {
+    color: #6b7280;
+    font-weight: 500;
+}
+
+/* Table improvements */
+.table-hover tbody tr:hover {
+    background-color: #f9fafb;
+    transition: background-color 0.15s ease-in-out;
+}
+
+/* Mobile responsive improvements */
+@media (max-width: 640px) {
+    .mobile-stack {
+        flex-direction: column !important;
+    }
+    
+    .mobile-full {
+        width: 100% !important;
+    }
+    
+    .mobile-center {
+        text-align: center !important;
+    }
+}

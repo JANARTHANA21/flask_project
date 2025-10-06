@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}Edit Location - Inventory Management{% endblock %}
+
+{% block content %}
+<div class="max-w-2xl mx-auto">
+    <div class="bg-white rounded-lg shadow">
+        <div class="px-6 py-4 border-b border-gray-200">
+            <h4 class="text-lg font-semibold text-gray-900">Edit Location: {{ location.location_id }}</h4>
+        </div>
+        <div class="p-6">
+            <form method="POST" class="space-y-6">
+                <div>
+                    <label for="location_id" class="block text-sm font-medium text-gray-700 mb-2">Location ID</label>
+                    <input type="text" id="location_id" value="{{ location.location_id }}" readonly
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md bg-gray-100 text-gray-500">
+                    <p class="text-sm text-gray-500 mt-1">Location ID cannot be changed</p>
+                </div>
+                
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-2">
+                        Location Name <span class="text-red-500">*</span>
+                    </label>
+                    <input type="text" id="name" name="name" value="{{ location.name }}" required
+                           class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">
+                </div>
+                
+                <div>
+                    <label for="address" class="block text-sm font-medium text-gray-700 mb-2">Address</label>
+                    <textarea id="address" name="address" rows="3"
+                              class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-green-500 focus:border-transparent">{{ location.address or '' }}</textarea>
+                </div>
+                
+                <div class="flex justify-end space-x-3">
+                    <a href="{{ url_for('locations') }}" class="bg-gray-300 hover:bg-gray-400 text-gray-700 px-4 py-2 rounded transition">
+                        Cancel
+                    </a>
+                    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded transition">
+                        Update Location
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}
