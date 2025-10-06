@@ -59,6 +59,3 @@ instance/
 .Trashes
 ehthumbs.db
 Thumbs.db
-
-# Screenshots (comment out if you want to include them)
-screenshots/
