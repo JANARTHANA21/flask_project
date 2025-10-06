@@ -74,16 +74,16 @@ flask-inventory/
 ## Screenshots
 
 ### HOME
-![Home](./static/screenshots/home.png)
+![Home](https://raw.githubusercontent.com/JANARTHANA21/flask_project/main/static/screenshots/home.png)
 
 ### PRODUCTS  
-![Products](./static/screenshots/products.png)
+![Products](https://raw.githubusercontent.com/JANARTHANA21/flask_project/main/static/screenshots/products.png)
 
 ### LOCATIONS
-![Locations](./static/screenshots/locations.png)
+![Locations](https://raw.githubusercontent.com/JANARTHANA21/flask_project/main/static/screenshots/locations.png)
 
 ### MOVEMENTS
-![Movements](./static/screenshots/movements.png)
+![Movements](https://raw.githubusercontent.com/JANARTHANA21/flask_project/main/static/screenshots/movements.png)
 
 ### REPORTS
-![Reports](./static/screenshots/reports.png)
+![Reports](https://raw.githubusercontent.com/JANARTHANA21/flask_project/main/static/screenshots/reports.png)
