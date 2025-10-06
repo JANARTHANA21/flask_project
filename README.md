@@ -73,17 +73,17 @@ flask-inventory/
 
 ## Screenshots
 
-## HOME
-![Home](static/screenshots/home.png)
+### HOME
+![Home](./static/screenshots/home.png)
 
-## PRODUCTS
-![Products](static/screenshots/products.png)
+### PRODUCTS  
+![Products](./static/screenshots/products.png)
 
-## LOCATIONS
-![Locations](static/screenshots/locations.png)
+### LOCATIONS
+![Locations](./static/screenshots/locations.png)
 
-## MOVEMENTS
-![Movements](static/screenshots/movements.png)
+### MOVEMENTS
+![Movements](./static/screenshots/movements.png)
 
-## REPORTS
-![Reports](static/screenshots/reports.png)
+### REPORTS
+![Reports](./static/screenshots/reports.png)
