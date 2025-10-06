@@ -44,7 +44,8 @@ python3 app.py
 ### Step 7: See Your App in Action! 
 Open your web browser and go to: **http://127.0.0.1:5002**
 
-````
+```bash
+
 flask-inventory/
 ├── app.py                 # Main Flask app (this is where everything starts!)
 ├── seed_data.py          # Creates example data for you to try
@@ -64,7 +65,7 @@ flask-inventory/
 │   │   ├── add.html     # Add new location
 │   │   └── edit.html    # Edit existing location
 │   ├── movements/       # Movement tracking pages
-│   │   ├── index.html   # List all movements
+│   │   ├── index.html   # List all movements`
 │   │   └── add.html     # Record new movement
 │   └── reports/         # Reports and analytics
 │       └── stock_balance.html  # Stock balance report
@@ -79,8 +80,14 @@ flask-inventory/
 ### PRODUCTS  
 ![Locations](static/screenshots/products.png)
 
+### ADD PRODUCTS  
+![Locations](static/screenshots/addProducts.png)
+
 ### LOCATIONS
 ![Products](static/screenshots/locations.png)
+
+### ADD LOCATIONS`
+![Products](static/screenshots/addLocations.png)
 
 ### MOVEMENTS
 ![Movements](static/screenshots/movements.png)
